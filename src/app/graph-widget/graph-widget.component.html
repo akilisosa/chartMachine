@@ -1,0 +1,47 @@
+
+<mat-card>
+    <div>
+        <h2 style='margin:0px'>{{title}}</h2>
+        <h4 style='color:darkgray'>{{subHeader}}</h4>
+    </div>
+
+    <div style='display:flex; flex-direction: row; justify-content: space-between;'>
+        <div style='display:flex; flex-direction: row; '>
+        <div style='margin-inline:10px'>
+            <p style='font-weight: 600; font-size: 12px; margin:0px'>Target</p>
+            <p style='font-weight: 800; font-size: 16px;'>{{target}}</p>
+        </div>
+
+        <div style='margin-inline:10px'>
+            <p style='font-weight: 600; font-size: 12px; margin:0px'>Actual</p>
+            <p style='font-weight: 800; font-size: 16px;'>{{actual}}</p>
+        </div>
+    </div>
+
+        <div style=''>
+             <button mat-icon-button style='border-width: 0px;' [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+              <div style='display: flex;
+  align-items: center;'>
+                <span style='vertical-align: middle;'>snacky </span> 
+              <mat-icon>more_vert</mat-icon>
+            </div>
+              </button>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                  <mat-icon>dialpad</mat-icon>
+                  <span>Redial</span>
+                </button>
+                <button mat-menu-item disabled>
+                  <mat-icon>voicemail</mat-icon>
+                  <span>Check voice mail</span>
+                </button>
+                <button mat-menu-item>
+                  <mat-icon>notifications_off</mat-icon>
+                  <span>Disable alerts</span>
+                </button>
+              </mat-menu>
+        
+        </div>
+    </div>
+ 
+</mat-card>
